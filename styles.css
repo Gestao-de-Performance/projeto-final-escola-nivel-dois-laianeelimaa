@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Efeito Parallax */
+    background-image: url(./FundoEscolar.jpg); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0eded; 
+}
+
+header .logo img {
+    width: 150px; 
+}
+
+.section {
+    padding: 50px;
+    text-align: center;
+    /*transparência - parallax */
+    background-color: rgba(235, 235, 171, 0.9);
+}
+
+.color1 {
+    background-color: rgba(235, 235, 171, 0.9);
+}
+
+.color2 {
+    background-color: rgba(120, 189, 145, 0.9);
+}
+
+.color3 {
+    background-color: rgba(77, 143, 129, 0.9);
+    color: white;
+}
+
+.color4 {
+    background-color: rgba(155, 75, 84, 0.9);
+    color: white;
+}
+
+.color5 {
+    background-color: rgba(215, 152, 169, 0.9);
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5em; /* fonte dos títulos */
+}
+
+/* estilo - apresentação */
+.presentation-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin: 20px auto;
+    max-width: 1200px; 
+}
+
+.presentation-text {
+    flex: 1; 
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1em; 
+    line-height: 1.6;
+}
+
+.presentation-text p {
+    margin-bottom: 15px;
+}
+
+/* parte da descrição de serviços */
+.services-list {
+    font-size: 1em;
+    line-height: 1.8;
+}
+
+.animated-title {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4d8f81;
+    text-transform: uppercase;
+    animation: animateTitle 4s ease-in-out infinite;
+}
+
+/*parte da descrição dos projetos*/
+.projects-content {
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    flex-wrap: wrap; 
+    margin: 20px auto;
+    max-width: 1200px; 
+}
+
+.projects-text {
+    flex: 1; 
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1em; 
+    line-height: 1.6;
+    
+}
+
+@keyframes animateTitle {
+    0% { transform: scale(1); color: #4d8f81; }
+    25% { transform: scale(1.1); color: #78bd91; }
+    50% { transform: scale(1); color: #4d8f81; }
+    75% { transform: scale(1.1); color: #9b4b54; }
+    100% { transform: scale(1); color: #4d8f81; }
+}
+
+/*carrossel */
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Largura do carrossel */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carrossel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-slides img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    height: auto;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/*  responsividade*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .presentation-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .presentation-text {
+        max-width: 100%;
+        text-align: left;
+    }
+}
